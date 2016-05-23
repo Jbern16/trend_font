@@ -1,0 +1,14 @@
+<section class="landing">
+    <% if current_user %>
+    <div class="headline">
+      <h3>Hello, <%= current_user["name"] %></h3>
+    </div>
+    <div class="logout-container">
+      <%= link_to "Logout", logout_path, method: :delete, class: "button logout" %>
+    </div>
+    <% else %>
+    <div class="log-in-container">
+      <%= link_to "Log In With Google", google_login_path, class: "button log-in"  %>
+    </div>
+    <% end %>
+</section>

@@ -1,0 +1,21 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+  pool: 5
+
+development:
+  <<: *default
+  database: trend_font_development
+
+test:
+  <<: *default
+  database: trend_font_test
+
+#
+production:
+  <<: *default
+  database: trend_font_production
+  username: trend_font
+  password: <%= ENV['TREND_FONT_DATABASE_PASSWORD'] %>

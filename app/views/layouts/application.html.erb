@@ -4,10 +4,24 @@
   <title>trendWolf</title>
   <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag 'application'  %>
+  <script>
+  var fonts = '<%= @required_families %>'.split(', ')
+  WebFontConfig = {
+    google: {
+      families: fonts
+    }
+  };
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+    s.parentNode.insertBefore(wf, s);
+  })(document);
+  </script>
 </head>
 <body>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
+
 </html>

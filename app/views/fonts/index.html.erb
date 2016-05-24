@@ -1,12 +1,12 @@
 <div class="all">
   <% @trending_fonts.each do |font| %>
-  <div class="font">
+  <div style="font-family:<%= font.family%>;">
     <h2><%= font.family %></h2>
     <br>
     <p><%= font.subsets %></p>
     <br>
     <%= link_to "Download", font.file %>
     <hr>
-  <% end %>
   </div>
+  <% end %>
 </div>

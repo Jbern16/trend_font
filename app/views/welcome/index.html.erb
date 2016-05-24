@@ -1,14 +1,22 @@
-<section class="landing">
+<div class="welcome-page">
+  <h1 class="headline">trendWolf</h1>
+  <h2 class="sub-headline">Trending Fonts</h2>
+  <h3 class="flavor">Googles Top Ten</h3>
+
+
+  <section class="landing">
     <% if current_user %>
-    <div class="headline">
+    <div class="welcome-name">
       <h3>Hello, <%= current_user["name"] %></h3>
     </div>
     <div class="logout-container">
       <%= link_to "Logout", logout_path, method: :delete, class: "button logout" %>
+      <%= link_to "Check Out The Fonts", trending_path, class: 'button' %>
     </div>
     <% else %>
     <div class="log-in-container">
       <%= link_to "Log In With Google", google_login_path, class: "button log-in"  %>
     </div>
     <% end %>
-</section>
+  </section>
+</div>

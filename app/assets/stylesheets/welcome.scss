@@ -1,35 +1,68 @@
 // landing page grid
 
+body {
+  background-color: #FFF1D0;
+
+  .welcome-page {
+    font-family: 'Cutive Mono' ;
+
+      hr {
+          background-color: #000;
+          height: 3px;
+      }
+    }
+}
+
+
+.headline {
+  padding-left: 5%;
+  font-size: 36px;
+}
+
+.sub-headline {
+  padding-left: 10%;
+  font-size: 32px;
+}
+
+.flavor {
+  padding-left: 15%;
+  font-size: 24px;
+
+}
+
+
 .landing {
     @include outer-container(100%);
-    padding-top:  20%;
-    padding-left: 40%;
-    padding-right: 40%;
+    padding-top:  0%;
+    padding-left: 22%;
+    padding-right: 35%;
 
-    .headline {
-    }
+
   }
 
 .logout-container {
-  @include outer-container(50%);
+  @include outer-container(60%);
   padding-top: 5%;
 
     .button {
-      $icon-size: 1.6em;
-      background-color: whitesmoke;
+      background-color: inherit;
       padding: 1em;
       width: 100%;
+      border: 1px solid #000;
+      border-radius: 5px;
+
     }
 }
 
 .log-in-container {
-  @include outer-container(75%);
-  padding-top: 10%;
-
+  @include outer-container(100%);
+  padding-top: 5%;
     .button {
       $icon-size: 1.6em;
-      background-color: whitesmoke;
+      background-color: inherit;
       padding: 1em;
       width: 100%;
+      border: 1px solid #000;
+      border-radius: 5px;
     }
 }

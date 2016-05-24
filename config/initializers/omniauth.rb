@@ -3,7 +3,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   {
     scope: 'profile',
     image_aspect_ratio: 'square',
-    image_size: 48,
+    image_size: 100,
     access_type: 'online'
   }
 

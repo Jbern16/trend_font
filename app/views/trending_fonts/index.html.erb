@@ -2,7 +2,7 @@
   <% @trending_fonts.each do |font| %>
   <div class= "font" style="font-family:<%= font.family%>;">
     <div class="ranking">
-      <h1><%= @trending_fonts.index(font) + 1 %></h1>
+      <h1><%= font.find_rank(@trending_fonts) %></h1>
     </div>
     <h2><%= font.family %></h2>
     <p><%= font.subsets %></p>
@@ -12,10 +12,10 @@
       <br>
     </div>
       <div class="inputs">
-        <input id="<%= font.idify %>" type="url" value="<%=font.cdn%>">
+        CDN: <input id="<%= font.idify %>" type="url" value="<%=font.cdn%>">
         <button id="copy_btn" class="<%= font.idify %>"><i class="fa fa-clipboard"></i></button>
       </div>
-      <hr>
+      <br>
     </div>
   <br>
   <% end %>

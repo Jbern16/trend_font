@@ -22,6 +22,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'capybara'
   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
+  gem 'simplecov', :require => false
 end
 
 group :test do

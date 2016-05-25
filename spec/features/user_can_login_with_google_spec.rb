@@ -22,4 +22,27 @@ RSpec.feature 'user can login with google' do
     expect(page).to have_link "Logout"
 
   end
+  scenario 'they can logout' do
+
+    OmniAuth.config.test_mode = true
+
+    OmniAuth.config.add_mock(
+      :google_oauth2,
+      {
+        :info => {
+        :email => 'test@some_test_domain.com',
+        :name=>'Test User'
+      }
+    })
+
+    visit "/"
+
+    click_link "Log In With Google"
+
+    click_link 'Logout'
+
+    expect(page).to have_content "Log In With Google"
+
+  end
+
 end

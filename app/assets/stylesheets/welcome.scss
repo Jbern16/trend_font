@@ -7,7 +7,7 @@ body {
     font-family: "Cutive Mono";
     @include outer-container;
     background-color: #fff;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
     padding-top: 5%;
     margin-left: 20%;
     text-align: center;
@@ -27,6 +27,10 @@ body {
 
     .log-container {
       padding-top: 10%;
+    }
+
+    .logout {
+      margin-top: 10%;
     }
 
     a {

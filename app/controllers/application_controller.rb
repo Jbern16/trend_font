@@ -3,12 +3,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    @user ||= session[:user] if session[:user]
+    @user ||=  OpenStruct.new(session[:user]) if session[:user]
   end
 
-
   def required_fonts
-    @required_families = Font.all.map do |font|
+    @required_families = Font.all(params["controller"]).map do |font|
       font.family
     end
      @required_families = @required_families.map(&:to_s).join(", ")

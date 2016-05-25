@@ -4,8 +4,8 @@ class Font < OpenStruct
     GoogleFontService.new
   end
 
-  def self.all
-    raw_fonts = service.trending_fonts
+  def self.all(method)
+    raw_fonts = service.send(method)
     raw_fonts.first(10).map do |font|
       Font.new(family: font[:family], file: font[:files][:regular],
                subsets: font[:subsets].join(', '), cdn: get_cdn_link(font))
@@ -25,4 +25,7 @@ class Font < OpenStruct
     family.split.join("-")
   end
 
+  def find_rank(fonts)
+    fonts.index(self) + 1
+  end
 end

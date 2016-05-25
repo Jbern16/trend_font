@@ -21,4 +21,10 @@ class GoogleFontService
     parsed[:items]
   end
 
+
+  def popular_fonts
+    parse(get_fonts('popularity'))
+  end
+
+
 end

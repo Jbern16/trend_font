@@ -1,0 +1,22 @@
+<div class="all">
+  <% @popular_fonts.each do |font| %>
+  <div class= "font" style="font-family:<%= font.family%>;">
+    <div class="ranking">
+      <h1><%= font.find_rank(@popular_fonts) %></h1>
+    </div>
+    <h2><%= font.family %></h2>
+    <p><%= font.subsets %></p>
+    <br>
+    <div class="actions">
+      <%= link_to "Download", font.file, class: 'button' %>
+      <br>
+    </div>
+      <div class="inputs">
+        CDN: <input id="<%= font.idify %>" type="url" value="<%=font.cdn%>">
+        <button id="copy_btn" class="<%= font.idify %>"><i class="fa fa-clipboard"></i></button>
+      </div>
+      <br>
+    </div>
+  <br>
+  <% end %>
+</div>

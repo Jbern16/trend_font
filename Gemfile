@@ -17,12 +17,18 @@ gem 'unicorn'
 
 group :development, :test do
   gem 'rspec'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
   gem 'pry'
   gem 'pry-rails'
   gem 'capybara'
   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
 end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+end
+
 
 group :development do
   gem 'web-console', '~> 2.0'

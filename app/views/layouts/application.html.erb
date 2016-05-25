@@ -3,19 +3,22 @@
 <head>
   <title>trendWolf</title>
   <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag 'application'  %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
   <script>
-  var fonts = '<%= @required_families %>'.split(', ')
-  WebFontConfig = {
-    google: {
-      families: fonts
-    }
-  };
-  (function(d) {
-    var wf = d.createElement('script'), s = d.scripts[0];
-    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
-    s.parentNode.insertBefore(wf, s);
-  })(document);
+    var fonts = '<%= @required_families %>'.split(', ')
+    WebFontConfig = {
+      google: {
+        families: fonts
+      }
+    };
+    (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+    })(document);
   </script>
 </head>
 <body>

@@ -1,68 +1,52 @@
 // landing page grid
 
 body {
-  background-color: #FFF1D0;
+  background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGElEQVQIW2NkiPv/n2ERIyMDFMAZxAsAAMFeAwU8FTX3AAAAAElFTkSuQmCC") repeat;
 
   .welcome-page {
-    font-family: 'Cutive Mono' ;
+    font-family: "Cutive Mono";
+    @include outer-container;
+    background-color: #fff;
+    padding-bottom: 10%;
+    padding-top: 5%;
+    margin-left: 20%;
+    text-align: center;
+    margin-right: 20%;
+    margin-top: 3%;
+    border: 5px solid red;
+    border-top: 20px solid red;
+    border-bottom: 20px solid red;
 
-      hr {
-          background-color: #000;
-          height: 3px;
-      }
+    .headline {
+      font-size: 60px;
     }
-}
 
+    .welcome-name {
+      padding-top: 5%
+    }
 
-.headline {
-  padding-left: 5%;
-  font-size: 36px;
-}
+    .log-container {
+      padding-top: 10%;
+    }
 
-.sub-headline {
-  padding-left: 10%;
-  font-size: 32px;
-}
+    a {
+      text-decoration: none;
+      color: black;
+    }
 
-.flavor {
-  padding-left: 15%;
-  font-size: 24px;
-
-}
-
-
-.landing {
-    @include outer-container(100%);
-    padding-top:  0%;
-    padding-left: 22%;
-    padding-right: 35%;
-
-
+    a:hover{
+      background-color: blue;
+      color: white;
+    }
   }
 
-.logout-container {
-  @include outer-container(60%);
-  padding-top: 5%;
 
-    .button {
-      background-color: inherit;
-      padding: 1em;
-      width: 100%;
-      border: 1px solid #000;
-      border-radius: 5px;
+  .button {
+    background-color: inherit;
+    padding: 1em;
+    margin-top: 5%;
+    border: 1px solid #000;
+    border-radius: 5px;
+  }
 
-    }
-}
-
-.log-in-container {
-  @include outer-container(100%);
-  padding-top: 5%;
-    .button {
-      $icon-size: 1.6em;
-      background-color: inherit;
-      padding: 1em;
-      width: 100%;
-      border: 1px solid #000;
-      border-radius: 5px;
-    }
 }

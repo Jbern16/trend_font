@@ -1,12 +1,22 @@
 <div class="all">
   <% @trending_fonts.each do |font| %>
-  <div style="font-family:<%= font.family%>;">
+  <div class= "font" style="font-family:<%= font.family%>;">
+    <div class="ranking">
+      <h1><%= @trending_fonts.index(font) + 1 %></h1>
+    </div>
     <h2><%= font.family %></h2>
-    <br>
     <p><%= font.subsets %></p>
     <br>
-    <%= link_to "Download", font.file %>
-    <hr>
-  </div>
+    <div class="actions">
+      <%= link_to "Download", font.file, class: 'button' %>
+      <br>
+    </div>
+      <div class="inputs">
+        <input id="<%= font.idify %>" type="url" value="<%=font.cdn%>">
+        <button id="copy_btn" class="<%= font.idify %>"><i class="fa fa-clipboard"></i></button>
+      </div>
+      <hr>
+    </div>
+  <br>
   <% end %>
 </div>

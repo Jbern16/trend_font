@@ -14,4 +14,4 @@
 
 # Ignore application configuration
 /config/application.yml
-/spec/vcr
+/spec/vcr/*

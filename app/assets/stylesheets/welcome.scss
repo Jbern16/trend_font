@@ -1,7 +1,19 @@
 // landing page grid
 
 body {
-  background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGElEQVQIW2NkiPv/n2ERIyMDFMAZxAsAAMFeAwU8FTX3AAAAAElFTkSuQmCC") repeat;
+
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGElEQVQIW2NkiPv/n2ERIyMDFMAZxAsAAMFeAwU8FTX3AAAAAElFTkSuQmCC") repeat;
+
+  .loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('images/hourglass.gif') 50% 50% no-repeat rgb(249,249,249);
+  }
+
 
   .welcome-page {
     font-family: "Cutive Mono";

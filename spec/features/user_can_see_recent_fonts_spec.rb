@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.feature 'user can see fonts' do
-  scenario 'when they visit /trending' do
-    VCR.use_cassette('feature/see_trending_fonts')  do
+  scenario 'when they visit /recent' do
+    VCR.use_cassette('feature/see_recent_fonts')  do
 
-      font1 = Font.all("trending_fonts").first
+      font1 = Font.all("recent_fonts").first
 
-      visit '/trending'
+      visit '/recent'
 
       expect(page).to have_content font1.family
       expect(page).to have_content font1.subsets

@@ -1,14 +1,14 @@
 <div class="lead">
-  <h1>Trending Fonts</h1>
+  <h1 class=popular>Recent Fonts</h1>
+  <%= link_to "See Trending", trending_path %>
   <%= link_to "See Popular", popular_path %>
-  <%= link_to "See Recent", recent_path %>
   <%= link_to "Home", root_path, class: 'home' %>
 </div>
 <div class="all">
-  <% @trending_fonts.each do |font| %>
+  <% @recent_fonts.each do |font| %>
   <div class= "font" style="font-family:<%= font.family%>;">
     <div class="ranking">
-      <h1><%= font.find_rank(@trending_fonts) %></h1>
+      <h1><%= font.find_rank(@recent_fonts) %></h1>
     </div>
     <h2><%= font.family %></h2>
     <p><%= font.subsets %></p>

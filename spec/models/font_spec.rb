@@ -26,4 +26,17 @@ RSpec.describe Font do
     end
   end
 
+  it 'has its methods for popular' do
+    VCR.use_cassette('font/has_methods_recent') do
+
+      fonts = Font.all("recent_fonts")
+      font = fonts.first
+
+      expect(font).to respond_to :family
+      expect(font).to respond_to :file
+      expect(font).to respond_to :subsets
+      expect(font).to respond_to :cdn
+    end
+  end
+
 end

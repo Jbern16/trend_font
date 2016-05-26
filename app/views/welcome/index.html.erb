@@ -1,6 +1,6 @@
 <div class="welcome-page">
   <h1 class="headline">trendWolf</h1>
-  <h2 class="sub-headline">Trending and Popular Fonts From Google</h2>
+  <h2 class="sub-headline">Trending, Popular,and Most Recent Fonts From Google</h2>
 
 
   <section class="landing">
@@ -13,7 +13,10 @@
       <%= link_to "Check Out Trending Fonts", trending_path, class: 'button' %>
       <%= link_to "Check Out Popular Fonts", popular_path, class: 'button' %>
       <div class='logout'>
-        <%= link_to "Logout", logout_path, method: :delete, class: "button logout" %>
+        <%= link_to "Check Out Recent Fonts", recent_path, class: 'button' %>
+        <div class='logout'>
+          <%= link_to "Logout", logout_path, method: :delete, class: "button logout" %>
+        </div>
       </div>
     </div>
     <% else %>

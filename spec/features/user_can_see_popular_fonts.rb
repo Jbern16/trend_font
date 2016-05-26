@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'user can see fonts' do
   scenario 'when they visit /popular' do
-    VCR.use_cassette('feature/see_fonts', record: :new_episodes)  do
+    VCR.use_cassette('feature/see_popular_fonts')  do
 
       font1 = Font.all("popular_fonts").first
 

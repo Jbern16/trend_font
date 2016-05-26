@@ -16,15 +16,19 @@ class GoogleFontService
     parse(get_fonts('trending'))
   end
 
-  def parse(response)
-    parsed = JSON.parse(response.body, symbolize_names: true)
-    parsed[:items]
-  end
-
-
   def popular_fonts
     parse(get_fonts('popularity'))
   end
 
+  def recent_fonts
+    parse(get_fonts('date'))
+  end
+
+  private
+
+  def parse(response)
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    parsed[:items]
+  end
 
 end

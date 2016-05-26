@@ -9,8 +9,7 @@ class ApplicationController < ActionController::Base
   def required_fonts
     @required_families = Font.all(params["controller"]).map do |font|
       font.family
-    end
-     @required_families = @required_families.map(&:to_s).join(", ")
+    end.map(&:to_s).join(", ")
   end
 
 end

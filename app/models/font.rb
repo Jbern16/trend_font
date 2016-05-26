@@ -14,11 +14,7 @@ class Font < OpenStruct
 
   def self.get_cdn_link(font)
     family = font[:family]
-    if family.include?(" ")
-      "https://fonts.googleapis.com/css?family=#{family.split.join("+")}"
-    else
-      "https://fonts.googleapis.com/css?family=#{family}"
-    end
+    "https://fonts.googleapis.com/css?family=#{family.split.join("+")}"
   end
 
   def idify

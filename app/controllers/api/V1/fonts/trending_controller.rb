@@ -1,4 +1,4 @@
-class API::V1::Fonts::TrendingController < ApplicationController
+class Api::v1::Fonts::TrendingController < ApplicationController
   respond_to :json
 
   def index

@@ -1,4 +1,4 @@
-class API::V1::Fonts::PopularController < ApplicationController
+class Api::v1::Fonts::PopularController < ApplicationController
   respond_to :json
 
   def index

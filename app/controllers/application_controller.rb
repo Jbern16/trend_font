@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   before_action :add_allow_credentials_headers
 
  def add_allow_credentials_headers
-   response.headers['Access-Control-Allow-Origin'] = request.headers['Origin'] || 'http://jbernesser.me/trendwolf/*'
+   response.headers['Access-Control-Allow-Origin'] = request.headers['Origin'] || '*'
    response.headers['Access-Control-Allow-Credentials'] = 'true'
  end
 

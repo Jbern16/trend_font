@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders'
 gem 'unicorn'
 gem 'rails_12factor'
+gem 'rack-cors', :require => 'rack/cors'
 
 
 group :development, :test do

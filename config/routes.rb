@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'welcome#index'
 
   get '/trending', to: 'trending_fonts#index', as: 'trending'

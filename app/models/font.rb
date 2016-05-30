@@ -6,9 +6,11 @@ class Font < OpenStruct
 
   def self.all(method)
     raw_fonts = service.send(method)
+    ranking = 0
     raw_fonts.first(10).map do |font|
       Font.new(family: font[:family], file: font[:files][:regular],
-               subsets: font[:subsets].join(', '), cdn: get_cdn_link(font))
+               subsets: font[:subsets].join(', '), cdn: get_cdn_link(font),
+               ranking: (ranking += 1).to_s )
     end
   end
 

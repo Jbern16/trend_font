@@ -9,6 +9,7 @@
   <%= csrf_meta_tags %>
   <script>
     var fonts = '<%= @required_families %>'.split(', ')
+    console.log(fonts);
     WebFontConfig = {
       google: {
         families: fonts

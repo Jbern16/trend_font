@@ -12,6 +12,7 @@ gem 'faraday'
 gem "omniauth-google-oauth2"
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'responders'
 gem 'unicorn'
 
 

@@ -20,5 +20,5 @@ Rails.application.routes.draw do
     end
   end
 
-  match 'http://jbernesser.me/trendwolf/*' => 'api#options', :via => [:options]
+  match '*any' => 'api#options', :via => [:options]
 end

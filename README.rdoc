@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### What?
 
-Things you may want to cover:
+* A Rails API serving up Google Font data to [TrendWolf](https://github.com/Jbern16/trendwolf) the Frontend
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* First iteration involved full frontend, including  Google OAuth before turing it into an app that purely serves my elm app.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+

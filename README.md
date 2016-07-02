@@ -1,4 +1,4 @@
-== README
+# Trend Font
 
 ### What?
 
